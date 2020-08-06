@@ -27,13 +27,12 @@ private:
     QPen *pen;
     QBrush *brush;
     QVector<QPoint> pointsVector;
-    QVector<QPoint> path;
+    QVector<QPoint> hull;
     QTimer *timer;
 
     QGraphicsLineItem *lineItem1,*lineItem2;
 
-    int crossProduct(QPoint a, QPoint b);
-    int cp(QPoint a, QPoint b, QPoint c);
+    int crossProduct(QPoint a, QPoint b, QPoint c);
     void drawCircle(QPoint point);
     QPoint leftMostPoint(QVector<QPoint> pointsVector);
 signals:
